@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resource/icon_calculator.png" type="image/x-icon">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+</head>
+
+<body>
+    <header>
+        <i class="fa-solid fa-calculator"></i>
+        <p>Calculadora de examen</p>
+    </header>
+
+    <section>
+        <div class="contenedor1">
+            <div class="input-area1">
+                <div class="input-group p-2">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="puntos">Puntos</span>
+                    <input type="number" class="bg-black text-white form-control text-center" id="puntos" max="100" min="1">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="puntos">pts</span>
+                </div>
+            </div>
+            <div class="input-area1">
+                <div class="input-group p-2">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="porcentaje">Porcentaje</span>
+                    <input type="number" class="bg-black text-white form-control text-center" id="porcentaje" max="100" min="1">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="porcentaje">%</span>
+                </div>
+            </div>
+            <div class="input-area1">
+                <div class="input-group p-2">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="constante">Constante</span>
+                    <input type="number" class="bg-black text-white form-control text-center" id="constante" max="100" min="0">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="constante">pts</span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <p class="consideration text-info">*Si no usa constante, dejela en blanco*</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor2">
+            <div class="input-area2 justify-content-center">
+                <div class="input-group">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="puntosObtenidos">Puntos Obtenidos</span>
+                    <input type="number" class="bg-black text-white form-control text-center" id="puntosObtenidos" max="100" min="1">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="puntosObtenidos">pts</span>
+                </div>
+                <div class="p-2">
+                    <button type="button" id="calcular" class="btn btn-info w-75">Calcular</button>
+                </div>
+            </div>
+            <div class="input-area2 justify-content-center" id="nota">
+                <div class="input-group">
+                    <span class="input-group-text bg-black text-white bg-opacity-50 bg-black text-white bg-opacity-50" for="porcentajeObtenido">Porcentaje obtenido</span>
+                    <input type="number" class="bg-black text-white form-control text-center" id="porcentajeObtenido" disabled>
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="porcentajeObtenido">%</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="notaObtenida">Nota obtenida</span>
+                    <input type="number" class="bg-black text-white form-control text-center" id="notaObtenida" disabled>
+                    <span class="input-group-text bg-black text-white bg-opacity-50" for="notaObtenida">pts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/screen.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="https://kit.fontawesome.com/48ce04dd4f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

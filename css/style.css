@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+  
+.shake {
+    animation: shake 0.5s;
+}
+
+header {
+    height: 5rem;
+    background-color: hsla(300, 1%, 18%, 0.623);
+    display: flex;
+    align-content: center;
+
+    i {
+        font-size: 300%;
+        padding: 0.7rem;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        font-size: 60px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+
+body {
+    width: 100%;
+    background-color:rgb(27, 27, 27);
+    background-image: url('/resource/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor1 {
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .input-area1 {
+        width: 33%;
+        padding: 10px;
+    }
+}
+
+.contenedor2 {
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .input-area2 {
+        width: 50%;
+        padding: 10px;
+        padding: 1rem;
+        text-align: center;
+
+        .input-group {
+            margin-bottom: 2rem;
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        height: 3rem;
+
+        i {
+            font-size: 1.7rem;
+            padding: 0.5rem;
+        }
+
+        p {
+            font-size: 130%;
+        }
+    }
+
+    .contenedor1 {
+        width: 100%;
+        display: inline;
+        justify-content: center;
+
+        .input-area1 {
+            width: 100%;
+        }
+    }
+
+    .contenedor2 {
+        width: 100%;
+        display: inline;
+        justify-content: center;
+
+        .input-area2 {
+            width: 100%;
+
+            .input-group {
+                width: 100%;
+            }
+        }
+    }
+
+
+}
