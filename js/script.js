@@ -1,4 +1,4 @@
-/** 
+/**
  * @description Función que se encarga de la logica para obtener los resultados
  * @returns {void}
  */
@@ -7,7 +7,9 @@ function obtenerResultados() {
   const porcentaje = formateo(document.getElementById("porcentaje").value);
   const constante = formateo(document.getElementById("constante").value);
 
-  const puntosObtenidos = formateo(document.getElementById("puntosObtenidos").value);
+  const puntosObtenidos = formateo(
+    document.getElementById("puntosObtenidos").value
+  );
 
   if (puntos === "" || porcentaje === "" || puntosObtenidos === "") {
     mostrarError("Faltan datos");
@@ -20,7 +22,9 @@ function obtenerResultados() {
   }
 
   if (puntosObtenidos > puntos) {
-    mostrarError("Los puntos obtenidos, no pueden ser mayor que los puntos del examen");
+    mostrarError(
+      "Los puntos obtenidos, no pueden ser mayor que los puntos del examen"
+    );
     limpiarCampos();
     return;
   }
@@ -32,10 +36,14 @@ function obtenerResultados() {
   document.getElementById("porcentajeObtenido").value = porcentajeObt;
 } //Funcion que se encarga de obtener los resultados de los espacios
 
-document.getElementById("calcular").addEventListener("click", obtenerResultados);
+document
+  .getElementById("calcular")
+  .addEventListener("click", obtenerResultados);
 document.getElementById("calcular").addEventListener("click", shakeArea);
 
-const elementos = document.querySelectorAll("#puntosObtenidos, #puntos, #porcentaje, #constante");
+const elementos = document.querySelectorAll(
+  "#puntosObtenidos, #puntos, #porcentaje, #constante"
+);
 
 elementos.forEach(function (elemento) {
   elemento.addEventListener("keyup", function (event) {
@@ -62,9 +70,9 @@ function mostrarError(mensaje) {
 }
 
 function limpiarCampos() {
-    document.getElementById("porcentajeObtenido").value = null;
-    document.getElementById("puntosObtenidos").value = null;
-    document.getElementById("notaObtenida").value = null;
+  document.getElementById("porcentajeObtenido").value = null;
+  document.getElementById("puntosObtenidos").value = null;
+  document.getElementById("notaObtenida").value = null;
 } //Funcion que se encarga de limpiar los campos
 
 function formateo(valor) {
