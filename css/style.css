@@ -1,3 +1,13 @@
+:root {
+    --swal2-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --swal2-title-font-size: 1.5rem;
+    --swal2-confirm-button-font-size: 1rem;
+    --swal2-cancel-button-font-size: 1rem;
+    --cyan-color: #3dd5f3;
+    --gray-color: #353535;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -10,15 +20,49 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-@keyframes shake {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-10px); }
-    40% { transform: translateX(10px); }
-    60% { transform: translateX(-10px); }
-    80% { transform: translateX(10px); }
-    100% { transform: translateX(0); }
+.swal2-container {
+    backdrop-filter: blur(5px);
 }
-  
+
+.swal2-show {
+    color: whitesmoke !important;
+    border: 0.3rem solid var(--cyan-color) !important;
+    background-color: var(--gray-color) !important;
+}
+
+.swal2-confirm,
+.swal2-confirm:focus-visible {
+    background-color: var(--cyan-color) !important;
+    color: black !important;
+    box-shadow: none !important;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-10px);
+    }
+
+    40% {
+        transform: translateX(10px);
+    }
+
+    60% {
+        transform: translateX(-10px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .shake {
     animation: shake 0.5s;
 }
@@ -45,7 +89,7 @@ header {
 
 body {
     width: 100%;
-    background-color:rgb(27, 27, 27);
+    background-color: rgb(27, 27, 27);
     background-image: url('/resource/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
